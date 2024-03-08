@@ -5,6 +5,7 @@ edition = "2021"
 publish = false
 
 [workspace]
+members = ["tests"]
 
 [[bin]]
 name = "workshop"
