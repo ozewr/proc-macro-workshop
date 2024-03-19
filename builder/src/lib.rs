@@ -135,7 +135,6 @@ fn one_fn(field: Field) -> impl Iterator<Item = proc_macro2::TokenStream> {
             }
             let expr: Expr = attr.parse_args().unwrap();
             if let Expr::Assign(exp) = expr {
-                
                 if let syn::Expr::Path(right) = *exp.left{
                     if !right.path.is_ident("each"){
                         let err_span = right.span();

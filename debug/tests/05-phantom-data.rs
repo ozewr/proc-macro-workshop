@@ -21,13 +21,7 @@
 // in other application-specific special cases.
 //
 // Concretely, for each type parameter #param in the input, you will need to
-// determine whether it is only ever mentioned inside of a PhantomData and if so
-// then avoid emitting a `#param: Debug` bound on that parameter. For the
-// purpose of the test suite it is sufficient to look for exactly the field type
-// PhantomData<#param>. In reality we may also care about recognizing other
-// possible arrangements like PhantomData<&'a #param> if the semantics of the
-// trait we are deriving would make it likely that callers would end up with
-// that sort of thing in their code.
+// determine wb
 //
 // Notice that we are into the realm of heuristics at this point. In Rust's
 // macro system it is not possible for a derive macro to infer the "correct"

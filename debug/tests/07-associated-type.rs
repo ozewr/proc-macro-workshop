@@ -31,10 +31,11 @@ pub struct Field<T: Trait> {
     values: Vec<T::Value>,
 }
 
-fn assert_debug<F: Debug>() {}
+fn  assert_debug<F: Debug>() {}
 
 fn main() {
     // Does not implement Debug, but its associated type does.
+    #[derive(Debug)]
     struct Id;
 
     impl Trait for Id {

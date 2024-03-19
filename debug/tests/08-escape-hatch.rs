@@ -48,6 +48,7 @@ struct Field<T: Trait> {
 fn assert_debug<F: Debug>() {}
 
 fn main() {
+    #[derive(Debug)]
     struct Id;
 
     impl Trait for Id {
